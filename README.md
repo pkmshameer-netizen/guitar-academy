@@ -1,25 +1,28 @@
-# Aamis Guitar — Family Edition (Preview)
+# Aamis Guitar – Family Edition
 
-A responsive, gamified family guitar-learning website prototype for Aamis Guitar for three child beginners and two adult beginners.
+**Version:** v1.0.0  
+**Release date:** 2026-11-23
+
+A colorful, mobile-friendly acoustic guitar learning prototype for five family learners:
+Aamina, Izza, Aamil, Naseeba and Shameer.
+
+## What's included
+- Five named learner profiles with individual color themes.
+- Individual lesson progress, stars and chord practice records in this browser's local storage.
+- Lesson flow with Learn → Explore activity → Practice checkpoint → 3-question quiz → completion reward.
+- A lesson only earns 10 stars after the learner completes the activity and practice checkboxes and passes at least 2 of 3 quiz questions.
+- Resume/exit before completion without awarding stars.
+- Undo last lesson completion for the currently selected learner.
+- Family progress view, chord library, songs and practice tools.
 
 ## Preview locally
-1. Extract the ZIP package.
-2. Open `index.html` in a modern browser.
-3. Choose any learner profile and explore Home, Learn, Chords, Tuner, Songs and Family.
-4. Lesson completions, chord practice and family totals are saved in this browser using `localStorage`.
+Open `index.html` in a modern browser. Progress is stored locally in that browser and is not yet synchronized between devices. Microphone-based tuning requires a secure context (HTTPS or localhost) and microphone permission.
 
-**Preview mode only:** this version does not require Supabase and does not yet synchronize data between devices. Clearing browser data will remove preview progress. Do not use sensitive information in this local demo.
+## Publish with GitHub Pages
+Upload the contents of this folder to the root of the `main` branch in your GitHub repository. Keep `index.html` at the repository root. GitHub Pages should be configured to deploy from `main` / root.
 
-## Included features
-- Five sample learner profiles (Child 1–3, Adult 1–2)
-- Family progress dashboard and CSV export
-- Ten beginner lessons with lesson unlocking, stars, confetti and milestone celebrations
-- Chord diagrams and practice tracking for Em, Am, G, C and D
-- Browser microphone tuner (microphone access requires HTTPS or localhost)
-- Beginner song examples with chord progressions
-- Responsive desktop and mobile navigation
+## Important limitations
+This is still the browser-only prototype. Supabase authentication and cloud synchronization have not been connected. Local browser storage is not a secure account system and should not be used for sensitive information. The quiz and practice checkboxes are learning checkpoints; they do not use microphone-based performance verification.
 
-## Later: connect Supabase and publish
-The next development step is to connect the existing Supabase project, create secure row-level-security policies, and replace local preview storage with cloud persistence. Then upload the website files to the `guitar-academy` GitHub repository and enable GitHub Pages.
-
-Never put a Supabase service-role key or database password in browser code or a public GitHub repository. Use only the public anon/publishable key after RLS policies have been configured and tested.
+## Version history
+- **v1.0.0 (2026-11-23):** Introduced staged Duolingo-style lessons with activity and practice checkpoints, a 3-question quiz, completion rewards, and undo-last-completion support.
